@@ -1,0 +1,3 @@
+import {DatePicker} from "../../ui/date-picker"; import {Field} from "../../ui/field"; import {Section,ThemeMatrix} from "../kit"; import type {PageMeta} from "../types";
+export const meta:PageMeta={id:"date-picker",title:"DatePicker",group:"Form controls",step:9,description:"Single-date calendar selection with bounds, disabled dates, and Field integration."};
+export default function Page(){return <ThemeMatrix><Section title="States"><div className="grid max-w-lg gap-3"><Field label="Review date"><DatePicker label="Review date" defaultValue={new Date(2026,9,9)}/></Field><DatePicker label="Large date" size="lg" tone="success"/><DatePicker label="Invalid date" invalid/><DatePicker label="Disabled date" disabled/></div></Section></ThemeMatrix>}

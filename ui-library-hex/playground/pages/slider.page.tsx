@@ -1,0 +1,4 @@
+import {useState} from "react"; import {RangeSlider,Slider} from "../../ui/slider"; import {Section,ThemeMatrix} from "../kit"; import type {PageMeta} from "../types";
+export const meta:PageMeta={id:"slider",title:"Slider / RangeSlider",group:"Form controls",step:9,description:"Single-value and bounded-range selection with keyboard operation."};
+function Controlled(){const [v,setV]=useState(62);return <Slider label="Controlled score" value={v} onValueChange={setV}/>}
+export default function Page(){return <ThemeMatrix><Section title="Single value"><div className="grid max-w-xl gap-4"><Slider size="sm" label="Small" defaultValue={20}/><Controlled/><Slider size="lg" tone="success" label="Large" defaultValue={80}/><Slider label="Disabled" defaultValue={40} disabled/></div></Section><Section title="Range"><div className="max-w-xl"><RangeSlider label="Readiness range" defaultValue={[35,85]} minLabel="Low" maxLabel="High"/></div></Section></ThemeMatrix>}

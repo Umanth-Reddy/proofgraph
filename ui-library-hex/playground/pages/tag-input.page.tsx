@@ -1,0 +1,3 @@
+import {TagInput} from "../../ui/tag-input"; import {Section,ThemeMatrix} from "../kit"; import type {PageMeta} from "../types";
+export const meta:PageMeta={id:"tag-input",title:"TagInput",group:"Form controls",step:9,description:"Create-new chip input with duplicate prevention, limits, and keyboard removal."};
+export default function Page(){return <ThemeMatrix><Section title="Create tags"><div className="grid max-w-lg gap-4"><TagInput label="Skills" defaultValue={["React","TypeScript"]} maxTags={5}/><TagInput label="Large tags" size="lg" tone="success" placeholder="Add expertise…"/><TagInput label="Invalid tags" invalid defaultValue={["Unknown"]}/><TagInput label="Disabled tags" disabled defaultValue={["Locked"]}/></div></Section></ThemeMatrix>}

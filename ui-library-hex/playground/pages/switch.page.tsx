@@ -1,0 +1,3 @@
+import {Switch} from "../../ui/switch"; import {Row,Section,ThemeMatrix} from "../kit"; import type {PageMeta} from "../types";
+export const meta:PageMeta={id:"switch",title:"Switch",group:"Form controls",step:9,description:"Immediate on/off settings with clear state and supporting copy."};
+export default function Page(){return <ThemeMatrix><Section title="Sizes"><Row>{(["sm","md","lg"] as const).map(size=><Switch key={size} size={size} label={`${size} switch`} defaultChecked={size!=="sm"}/>)}</Row></Section><Section title="States"><Row><Switch tone="success" label="Live updates" description="Refresh results automatically." defaultChecked/><Switch label="Disabled" disabled/><Switch label="Invalid" invalid/></Row></Section></ThemeMatrix>}

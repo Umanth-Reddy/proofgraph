@@ -1,0 +1,3 @@
+import {KanbanBoard} from "../../ui/kanban-board"; import {Checklist} from "../../ui/checklist"; import {Section,ThemeMatrix} from "../kit"; import type {PageMeta} from "../types";
+export const meta:PageMeta={id:"complex-flows",title:"Complex flows",group:"Flows",step:12,description:"Kanban and checklist foundations for multi-stage workflows."};
+export default function Page(){return <ThemeMatrix><Section title="Kanban"><KanbanBoard columns={[{id:"todo",title:"To do",cards:[{id:"a",content:"Review evidence"}]},{id:"done",title:"Done",cards:[]}]}/></Section><Section title="Checklist"><Checklist items={[{id:"a",label:"Connect account",done:true},{id:"b",label:"Review settings"}]}/></Section></ThemeMatrix>}
